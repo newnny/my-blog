@@ -10,10 +10,8 @@
 }
 
 .background {
-    margin-left: 20px;
-    margin-right: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .highlight {
@@ -25,8 +23,40 @@
 .main-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+.main-mobile-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-text {
     display: flex;
+    flex-direction: row;
+}
+
+.work-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 125px;
+}
+
+.work-mobile-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.a {
+    font-weight: 500;
+    color: black;
+}
+
+.a-no-deco {
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
 }

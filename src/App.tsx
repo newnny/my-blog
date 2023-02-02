@@ -23,17 +23,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar />
-        <Grid container direction="row">
-          <Grid item xs={1}/>
-          <Grid item xs={11}>
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/about' element={<About />} />
               <Route path='/works' element={<Works />} />
               <Route path='/contact' element={<Contact />} />
             </Routes>
-          </Grid>
-        </Grid>
       </div>
     </ThemeProvider>
   );

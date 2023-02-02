@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Link, Stack } from "@mui/material"
+import { Link, Stack, useMediaQuery, useTheme } from "@mui/material"
+import YardIcon from '@mui/icons-material/Yard';
 import '../App.css'
 
 const Navbar: React.FC = () => {
     const [selectedRoute, setSelectedRoute] = useState<string>("main")
     const navigate = useNavigate();
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleSelectRoute = (event: React.SyntheticEvent, link?: string) => {
         event.preventDefault();
@@ -28,15 +31,21 @@ const Navbar: React.FC = () => {
         }
     }
 
-
     return (
         <div>
-            <Stack spacing={1}>
+            <Stack spacing={matches ? 2 : 0} direction={matches ? "row" : "column"}>
+                <Link
+                    className="nav-link"
+                    color={selectedRoute === "main" ? "#504718" : "#4b5e91"}
+                    onClick={(event) => handleSelectRoute(event, "main")}
+                >
+                    <YardIcon style={{ height: 50, width: 50 }} />
+                </Link>
                 <Link
                     underline="hover"
                     className="nav-link"
                     color={selectedRoute === "about" ? "#504718" : "#4b5e91"}
-                    variant="h5"
+                    variant="h6"
                     onClick={(event) => handleSelectRoute(event, "about")}
                 >
                     About
@@ -45,7 +54,7 @@ const Navbar: React.FC = () => {
                     underline="hover"
                     className="nav-link"
                     color={selectedRoute === "works" ? "#504718" : "#4b5e91"}
-                    variant="h5"
+                    variant="h6"
                     onClick={(event) => handleSelectRoute(event, "works")}
                 >
                     Works
@@ -54,7 +63,7 @@ const Navbar: React.FC = () => {
                     underline="hover"
                     className="nav-link"
                     color={selectedRoute === "contact" ? "#504718" : "#4b5e91"}
-                    variant="h5"
+                    variant="h6"
                     onClick={(event) => handleSelectRoute(event, "contact")}
                 >
                     Contact
