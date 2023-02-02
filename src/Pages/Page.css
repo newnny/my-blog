@@ -1,0 +1,32 @@
+.App-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.background {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.highlight {
+    background-color: #fed49c;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-text {
+    display: flex;
+}
