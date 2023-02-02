@@ -74,7 +74,10 @@ const Works: React.FC = () => {
                         </div>
                     }
                     {selectedCategory === "Design" &&
-                        <p>/Design works</p>
+                        <div>
+                            <p>/Design works</p>
+                            <p>Not ready yet</p>
+                        </div>
                     }
                     {selectedCategory === "Others" &&
                         <p>/Others works</p>
