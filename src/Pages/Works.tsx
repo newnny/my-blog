@@ -68,7 +68,10 @@ const Works: React.FC = () => {
                 </Grid>
                 <Grid item sm={6}>
                     {selectedCategory === "Code" &&
-                        <p>/Code works</p>
+                        <div>
+                            <p>/Code works</p>
+                            <p>Not ready yet</p>
+                        </div>
                     }
                     {selectedCategory === "Design" &&
                         <p>/Design works</p>
