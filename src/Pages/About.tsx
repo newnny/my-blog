@@ -14,7 +14,7 @@ const About: React.FC  = () => {
                     <br />
                     <p>
                         I am working as a&nbsp;
-                        <b className="highlight">laed frontend developer</b>
+                        <b className="highlight">lead frontend developer</b>
                         &nbsp;and a&nbsp;
                         <b className="highlight">product designer</b>
                         &nbsp;in a&nbsp;
