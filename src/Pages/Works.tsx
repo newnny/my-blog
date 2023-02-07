@@ -16,19 +16,19 @@ const Works: React.FC = () => {
         {
             id: 1,
             name: "Code",
-            color: "#4b5e91",
+            color: "000000",
             fontWeight: "normal"
         },
         {
             id: 2,
             name: "Design",
-            color: "#4b5e91",
+            color: "000000",
             fontWeight: "normal"
         },
         {
             id: 3,
             name: "Others",
-            color: "#4b5e91",
+            color: "000000",
             fontWeight: "normal"
         }
     ])
@@ -38,9 +38,9 @@ const Works: React.FC = () => {
         setCategory(
             category.map(item => {
                 if (item.id === id) {
-                    return { ...item, color: "#504718", }
+                    return { ...item }
                 }
-                return { ...item, color: "#cccccc", }
+                return { ...item, color: "#828282" }
             })
         )
         if (name === "Code") {

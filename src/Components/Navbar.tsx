@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "about" ? "#504718" : "#4b5e91"}
+                    color={selectedRoute === "about" ? "000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "about")}
                 >
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "works" ? "#504718" : "#4b5e91"}
+                    color={selectedRoute === "works" ? "000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "works")}
                 >
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "contact" ? "#504718" : "#4b5e91"}
+                    color={selectedRoute === "contact" ? "000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "contact")}
                 >
