@@ -38,9 +38,9 @@ const Works: React.FC = () => {
         setCategory(
             category.map(item => {
                 if (item.id === id) {
-                    return { ...item, color: "#504718",  }
+                    return { ...item, color: "#504718", }
                 }
-                return { ...item, color: "#cccccc",  }
+                return { ...item, color: "#cccccc", }
             })
         )
         if (name === "Code") {
@@ -59,6 +59,7 @@ const Works: React.FC = () => {
                 <Grid item sm={4} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                     {category.map(item => (
                         <p
+                            key={item.id}
                             style={{ color: item.color, cursor: "pointer", fontSize: 20 }}
                             onClick={() => handleClickCategory(item.id, item.name)}
                         >

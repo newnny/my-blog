@@ -1,6 +1,7 @@
+import React from 'react'
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import { createTheme, ThemeProvider, Grid } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 import Navbar from './Components/Navbar';
 import Main from './Pages/Main';

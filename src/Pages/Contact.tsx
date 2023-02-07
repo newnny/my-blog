@@ -14,20 +14,20 @@ const Contact: React.FC = () => {
                     <b>Email</b>
                     <br />
                     Any inquires, please email 
-                    <a className="a-no-deco" href="mailto:hello@younhee.me" target="_blank">'here'&nbsp;<MailOutlineIcon/></a>
+                    <a className="a-no-deco" href="mailto:hello@younhee.me" target="_blank" rel="noreferrer">'here'&nbsp;<MailOutlineIcon/></a>
                     <br />
                     I will reach you as soon as possible.
                 </p>
                 <p>
                     <b>Linkedin</b>
                     <br />
-                    <a className="a-no-deco" href="https://www.linkedin.com/in/newnny/" target="_blank">linkedin.com/in/newnny&nbsp;<LaunchIcon /></a>
+                    <a className="a-no-deco" href="https://www.linkedin.com/in/newnny/" target="_blank" rel="noreferrer">linkedin.com/in/newnny&nbsp;<LaunchIcon /></a>
                     <br />
                 </p>
                 <p>
                     <b>Github</b>
                     <br />
-                    <a className="a-no-deco" href="https://github.com/newnny" target="_blank">github.com/newnny&nbsp;<LaunchIcon /></a>
+                    <a className="a-no-deco" href="https://github.com/newnny" target="_blank" rel="noreferrer">github.com/newnny&nbsp;<LaunchIcon /></a>
                     <br />
                 </p>
             </div>
