@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Page.css'
-import { Grid, Button, useMediaQuery, useTheme } from "@mui/material"
+import { Grid, useMediaQuery, useTheme } from "@mui/material"
 
 interface Data {
     id: number;
@@ -38,9 +38,9 @@ const Works: React.FC = () => {
         setCategory(
             category.map(item => {
                 if (item.id === id) {
-                    return { ...item, color: "#504718", fontWeight: "bold" }
+                    return { ...item, color: "#504718",  }
                 }
-                return { ...item, color: "#4b5e91", fontWeight: "normal" }
+                return { ...item, color: "#cccccc",  }
             })
         )
         if (name === "Code") {
@@ -56,31 +56,31 @@ const Works: React.FC = () => {
     return (
         <div className={matches ? " work-mobile-div" : "work-div"}>
             <Grid container direction={matches ? "column" : "row"}>
-                <Grid item sm={6} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <Grid item sm={4} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                     {category.map(item => (
                         <p
-                            style={{ color: item.color, fontWeight: item.fontWeight, cursor: "pointer", }}
+                            style={{ color: item.color, cursor: "pointer", fontSize: 20 }}
                             onClick={() => handleClickCategory(item.id, item.name)}
                         >
                             {item.name}
                         </p>
                     ))}
                 </Grid>
-                <Grid item sm={6}>
+                <Grid item sm={8}>
                     {selectedCategory === "Code" &&
                         <div>
-                            <p>/Code works</p>
+                            <p style={{ fontSize: 20 }}>/Code works</p>
                             <p>Not ready yet</p>
                         </div>
                     }
                     {selectedCategory === "Design" &&
                         <div>
-                            <p>/Design works</p>
+                            <p style={{ fontSize: 20 }}>/Design works</p>
                             <p>Not ready yet</p>
                         </div>
                     }
                     {selectedCategory === "Others" &&
-                        <p>/Others works</p>
+                        <p style={{ fontSize: 20 }}>/Others works</p>
                     }
                 </Grid>
             </Grid>

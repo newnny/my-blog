@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             <Stack spacing={matches ? 2 : 0} direction={matches ? "row" : "column"}>
                 <Link
                     className="nav-link"
-                    color={selectedRoute === "main" ? "#504718" : "#4b5e91"}
+                    color="#e8a47c"
                     onClick={(event) => handleSelectRoute(event, "main")}
                 >
                     <YardIcon style={{ height: 50, width: 50 }} />

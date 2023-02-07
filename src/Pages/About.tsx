@@ -1,6 +1,7 @@
 import React from 'react'
 import './Page.css'
 import { useMediaQuery, useTheme } from "@mui/material"
+import Face3Icon from '@mui/icons-material/Face3';
 
 const About: React.FC  = () => {
     const theme = useTheme();
@@ -19,7 +20,7 @@ const About: React.FC  = () => {
                         <b className="highlight">product designer</b>
                         &nbsp;in a&nbsp;
                         <b className="highlight">health tech start-up</b>
-                        &nbsp;called <a className="a" href="https://www.rampmedical.com/">'Ramp medical'</a> based in&nbsp;
+                        &nbsp;called <a className="a" href="https://www.rampmedical.com/" target="_blank">'Ramp medical'</a> based in&nbsp;
                         <b className="highlight">Berlin</b>
                         &nbsp;since 2020&nbsp;<br />
                         I studied&nbsp;
@@ -40,7 +41,7 @@ const About: React.FC  = () => {
                     <br />
                     <p>
                         Personally, I am keen on reading, writing, jazz/classical musics, miniaml architectures/designs, stationeries and kendo.<br />
-                        You can also find me here, <a className="a" href="https://blog.naver.com/type_rh">'my korean blog'</a>.<br />
+                        You can also find me here, <a className="a" href="https://blog.naver.com/type_rh" target="_blank">'my korean blog'</a>.<br />
                         I am writing random topics from a view of an insider and an outside of the world. <br />
                         Unfortunately, all articles are written in Korean.
                     </p>

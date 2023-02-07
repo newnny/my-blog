@@ -1,25 +1,34 @@
 import React from 'react'
 import './Page.css'
 import { useMediaQuery, useTheme } from "@mui/material"
+import LaunchIcon from '@mui/icons-material/Launch'
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
-const Contact: React.FC  = () => {
+const Contact: React.FC = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <div className={matches ? 'main-mobile-div' : 'main-div'}>
             <div className="background">
-                <p><b>Email</b></p>
                 <p>
-                    Any inquires, please email <a className="a-no-deco" href="mailto:hello@younhee.me">'here'</a>. <br />
+                    <b>Email</b>
+                    <br />
+                    Any inquires, please email 
+                    <a className="a-no-deco" href="mailto:hello@younhee.me" target="_blank">'here'&nbsp;<MailOutlineIcon/></a>
+                    <br />
                     I will reach you as soon as possible.
                 </p>
-                <p><b>Linkedin</b></p>
                 <p>
-                    <a className="a-no-deco" href="https://www.linkedin.com/in/newnny/">linkedin.com/in/newnny</a> <br />
+                    <b>Linkedin</b>
+                    <br />
+                    <a className="a-no-deco" href="https://www.linkedin.com/in/newnny/" target="_blank">linkedin.com/in/newnny&nbsp;<LaunchIcon /></a>
+                    <br />
                 </p>
-                <p><b>Github</b></p>
                 <p>
-                    <a className="a-no-deco" href="https://github.com/newnny">github.com/newnny</a> <br />
+                    <b>Github</b>
+                    <br />
+                    <a className="a-no-deco" href="https://github.com/newnny" target="_blank">github.com/newnny&nbsp;<LaunchIcon /></a>
+                    <br />
                 </p>
             </div>
         </div>
