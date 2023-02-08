@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './Page.css'
-import { Grid, useMediaQuery, useTheme } from "@mui/material"
+import { useMediaQuery, useTheme, Grid, Typography} from "@mui/material"
+import { CodingWorkList } from './Works/CodingWorkList'
+
 
 interface Data {
     id: number;
     name: string;
     color: string;
-    fontWeight: string;
 }
 
 const Works: React.FC = () => {
@@ -16,20 +17,17 @@ const Works: React.FC = () => {
         {
             id: 1,
             name: "Code",
-            color: "000000",
-            fontWeight: "normal"
+            color: "#000000"
         },
         {
             id: 2,
             name: "Design",
-            color: "000000",
-            fontWeight: "normal"
+            color: "#000000"
         },
         {
             id: 3,
             name: "Others",
-            color: "000000",
-            fontWeight: "normal"
+            color: "#000000"
         }
     ])
     const [selectedCategory, setSelectedCategory] = useState<string>("")
@@ -38,7 +36,7 @@ const Works: React.FC = () => {
         setCategory(
             category.map(item => {
                 if (item.id === id) {
-                    return { ...item }
+                    return { ...item, color: "#000000" }
                 }
                 return { ...item, color: "#828282" }
             })
@@ -54,39 +52,38 @@ const Works: React.FC = () => {
 
 
     return (
-        <div className={matches ? " work-mobile-div" : "work-div"}>
-            <Grid container direction={matches ? "column" : "row"}>
-                <Grid item sm={4} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+        <div>
+            <Grid container spacing={2} direction={matches ? "column" : "row"}>
+                <Grid item sm={4}>
                     {category.map(item => (
-                        <p
+                        <Typography
                             key={item.id}
                             style={{ color: item.color, cursor: "pointer", fontSize: 20 }}
                             onClick={() => handleClickCategory(item.id, item.name)}
                         >
                             {item.name}
-                        </p>
+                        </Typography>
                     ))}
                 </Grid>
                 <Grid item sm={8}>
                     {selectedCategory === "Code" &&
                         <div>
-                            <p style={{ fontSize: 20 }}>/Code works</p>
-                            <p>Not ready yet</p>
+                            <Typography style={{ fontSize: 20 }}>/Code works</Typography>
+                            <CodingWorkList />
                         </div>
                     }
                     {selectedCategory === "Design" &&
                         <div>
-                            <p style={{ fontSize: 20 }}>/Design works</p>
-                            <p>Not ready yet</p>
+                            <Typography style={{ fontSize: 20 }}>/Design works</Typography>
+                            <Typography>Not ready yet</Typography>
                         </div>
                     }
                     {selectedCategory === "Others" &&
-                        <p style={{ fontSize: 20 }}>/Others works</p>
+                        <Typography style={{ fontSize: 20 }}>/Others works</Typography>
                     }
                 </Grid>
             </Grid>
         </div>
-
     )
 }
 

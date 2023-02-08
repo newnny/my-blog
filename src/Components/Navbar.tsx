@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Link, Stack, useMediaQuery, useTheme } from "@mui/material"
+import { Link, Stack } from "@mui/material"
 import YardIcon from '@mui/icons-material/Yard';
 import '../App.css'
 
 const Navbar: React.FC = () => {
     const [selectedRoute, setSelectedRoute] = useState<string>("main")
     const navigate = useNavigate();
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleSelectRoute = (event: React.SyntheticEvent, link?: string) => {
         event.preventDefault();
@@ -33,10 +31,10 @@ const Navbar: React.FC = () => {
 
     return (
         <div>
-            <Stack spacing={matches ? 2 : 0} direction={matches ? "row" : "column"}>
+            <Stack spacing={2} direction="row" style={{ alignItems: "center" }}>
                 <Link
                     className="nav-link"
-                    color="#e8a47c"
+                    color="#000000"
                     onClick={(event) => handleSelectRoute(event, "main")}
                 >
                     <YardIcon style={{ height: 50, width: 50 }} />
@@ -44,7 +42,7 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "about" ? "000000" : "#828282"}
+                    color={selectedRoute === "about" ? "#000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "about")}
                 >
@@ -53,7 +51,7 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "works" ? "000000" : "#828282"}
+                    color={selectedRoute === "works" ? "#000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "works")}
                 >
@@ -62,7 +60,7 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "contact" ? "000000" : "#828282"}
+                    color={selectedRoute === "contact" ? "#000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "contact")}
                 >

@@ -8,6 +8,7 @@ import Main from './Pages/Main';
 import About from './Pages/About';
 import Works from './Pages/Works';
 import Contact from './Pages/Contact';
+import CodingWorks from './Pages/Works/CodingWorks';
 
 function App() {
   const theme = createTheme({
@@ -29,6 +30,7 @@ function App() {
               <Route path='/about' element={<About />} />
               <Route path='/works' element={<Works />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path='/work/coding/:codingId' element={<CodingWorks />} />
             </Routes>
       </div>
     </ThemeProvider>

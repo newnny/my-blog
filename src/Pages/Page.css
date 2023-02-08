@@ -24,8 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin: 100px 300px
 }
 
 .main-mobile-div {
@@ -37,17 +36,6 @@
 .main-text {
     display: flex;
     flex-direction: row;
-}
-
-.work-div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 125px;
-}
-
-.work-mobile-div {
-    display: flex;
-    flex-direction: column;
 }
 
 .a {
