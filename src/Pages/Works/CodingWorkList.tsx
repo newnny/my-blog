@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, Stack } from "@mui/material"
 import { useNavigate } from 'react-router-dom'
 
@@ -11,18 +11,18 @@ interface codingListData {
 export const CodingWorkList: React.FC = () => {
     const navigate = useNavigate();
 
-    const [codingList, setCodingList] = useState<codingListData[]>([
+    const codingList: codingListData[] = [
         {
             id: 1,
-            name: "Reusable modal",
-            linkId: "reusable_modal"
+            name: "Modal system",
+            linkId: "modal_system"
         },
         {
             id: 2,
             name: "Coding work 2",
             linkId: "work_2"
         }
-    ])
+    ]
 
     const handleClickLink = (event: React.SyntheticEvent, linkId?: string) => {
         event.preventDefault();
@@ -38,6 +38,8 @@ export const CodingWorkList: React.FC = () => {
                         <Link
                             key={list.id}
                             onClick={(event) => handleClickLink(event, list.linkId)}
+                            color="#ad7a5b"
+                            underline="hover"
                         >
                             {list.name}
                         </Link>

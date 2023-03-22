@@ -1,6 +1,8 @@
+import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom";
-import ReusableModal from "./ReusableModal";
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+
+import ModalSystem from "./Modals/ModalSystem";
 
 const CodingWorks = ({
 }) => {
@@ -10,12 +12,10 @@ const CodingWorks = ({
 
     return (
         <div>
-            <p onClick={() => navigate(-1)} style={{display: "flex", alignItems: "center", cursor: "pointer"}}>
+            <p onClick={() => navigate(-1)} style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
                 <ArrowCircleLeftIcon />&nbsp;Back to list
             </p>
-            {linkId === "/work/coding/reusable_modal" &&
-                <ReusableModal />
-            }
+            {linkId === "/work/coding/modal_system" && <ModalSystem />}
 
         </div>
     )
