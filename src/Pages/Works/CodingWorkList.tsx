@@ -14,8 +14,8 @@ export const CodingWorkList: React.FC = () => {
     const codingList: codingListData[] = [
         {
             id: 1,
-            name: "Modal system",
-            linkId: "modal_system"
+            name: "Coding work 1",
+            linkId: "work_1"
         },
         {
             id: 2,

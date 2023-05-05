@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
                     <b>Email</b>
                     <br />
                     Any inquires, please email 
-                    <a className="a-no-deco" href="mailto:hello@younhee.me" target="_blank" rel="noreferrer">'here'&nbsp;<MailOutlineIcon/></a>
+                    <a className="a-no-deco" href="mailto:newnny0812@gmail.com" target="_blank" rel="noreferrer">'here'&nbsp;<MailOutlineIcon/></a>
                     <br />
                     I will reach you as soon as possible.
                 </p>
