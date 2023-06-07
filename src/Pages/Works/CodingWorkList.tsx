@@ -14,13 +14,8 @@ export const CodingWorkList: React.FC = () => {
     const codingList: codingListData[] = [
         {
             id: 1,
-            name: "Coding work 1",
+            name: "Miniflux e-pub binder",
             linkId: "work_1"
-        },
-        {
-            id: 2,
-            name: "Coding work 2",
-            linkId: "work_2"
         }
     ]
 
@@ -40,6 +35,7 @@ export const CodingWorkList: React.FC = () => {
                             onClick={(event) => handleClickLink(event, list.linkId)}
                             color="#ad7a5b"
                             underline="hover"
+                            style={{padding: 10}}
                         >
                             {list.name}
                         </Link>
