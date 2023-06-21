@@ -22,15 +22,15 @@ const Works: React.FC = () => {
         {
             id: 2,
             name: "Design",
-            color: "#000000"
+            color: "#828282"
         },
         {
             id: 3,
             name: "Others",
-            color: "#000000"
+            color: "#828282"
         }
     ])
-    const [selectedCategory, setSelectedCategory] = useState<string>("")
+    const [selectedCategory, setSelectedCategory] = useState<string>("Code")
 
     const handleClickCategory = (id: number, name: string) => {
         setCategory(
