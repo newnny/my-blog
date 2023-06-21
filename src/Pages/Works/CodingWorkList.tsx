@@ -13,9 +13,14 @@ export const CodingWorkList: React.FC = () => {
 
     const codingList: codingListData[] = [
         {
-            id: 1,
-            name: "Miniflux e-pub binder",
+            id:1,
+            name: "RAMP medical",
             linkId: "work_1"
+        },
+        {
+            id: 2,
+            name: "Miniflux e-pub binder",
+            linkId: "work_2"
         }
     ]
 

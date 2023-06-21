@@ -20,7 +20,7 @@ const About: React.FC = () => {
                         a <b className="highlight">health tech start-up</b>&nbsp;
                         based in <b className="highlight">Berlin</b>.
                         I've been with the company since 2020,
-                        and I've been working tirelessly to develop an <b className="highlight">Electronic Medical Record (EMR) system</b> and <b className="highlight">Clinical Decision Support (CDS) tools</b> for health professionals.
+                        and I've been working tirelessly to develop an <b className="highlight">Electronic Medical Record (EMR) system</b>, <b className="highlight">Patient dashboards</b> and <b className="highlight">Clinical Decision Support (CDS) tools</b> for health professionals.
                     </p>
                     <p>
                         Before transitioning into the tech industry, I studied <b className="highlight">nursing</b> in South Korea and worked as a nurse/HCA for six years in Busan and London.
