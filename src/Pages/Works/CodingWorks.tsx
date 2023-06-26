@@ -47,10 +47,10 @@ const CodingWorks: React.FC = () => {
                             It designed to bind e-pub files using the Miniflux API.<br />
                             I've simplified the process of consuming feeds on your e-book reader, providing unparalleled convenience and ease-of-use.<br />
                             Discover a better way to enjoy your favorite RSS feeds with miniflux binder application<br />
-                            Please check&nbsp;
-                            <a className="a" href="https://minifluxbinder.vercel.app/" target="_blank" rel="noreferrer">
-                                here
-                            </a>!
+                            Please check here:&nbsp;
+                            <a className="a" href="https://www.minifluxbinder.com/" target="_blank" rel="noreferrer">
+                                www.minifluxbinder.com
+                            </a>
                         </p>
                     </div>
                 </div>
