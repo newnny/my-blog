@@ -55,7 +55,6 @@ const CodingWorks: React.FC = () => {
                     </div>
                 </div>
             }
-
         </div>
     )
 }

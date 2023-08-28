@@ -14,3 +14,8 @@
   align-items: center;
   cursor: pointer;
 }
+
+.a {
+  font-weight: bold;
+  color: cornflowerblue;
+}
