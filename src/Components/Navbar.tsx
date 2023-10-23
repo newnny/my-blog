@@ -17,16 +17,10 @@ const Navbar: React.FC = () => {
         if (link === "main") {
             setSelectedRoute("main")
             navigate("/")
-        } else if (link === "about") {
-            setSelectedRoute("about")
-            navigate("/about")
         } else if (link === "works") {
             setSelectedRoute("works")
             navigate("/works")
-        } else if (link === "contact") {
-            setSelectedRoute("contact")
-            navigate("/contact")
-        }
+        } 
     }
 
     return (
@@ -42,29 +36,11 @@ const Navbar: React.FC = () => {
                 <Link
                     underline="hover"
                     className="nav-link"
-                    color={selectedRoute === "about" ? "#000000" : "#828282"}
-                    variant="h6"
-                    onClick={(event) => handleSelectRoute(event, "about")}
-                >
-                    About
-                </Link>
-                <Link
-                    underline="hover"
-                    className="nav-link"
                     color={selectedRoute === "works" ? "#000000" : "#828282"}
                     variant="h6"
                     onClick={(event) => handleSelectRoute(event, "works")}
                 >
                     Works
-                </Link>
-                <Link
-                    underline="hover"
-                    className="nav-link"
-                    color={selectedRoute === "contact" ? "#000000" : "#828282"}
-                    variant="h6"
-                    onClick={(event) => handleSelectRoute(event, "contact")}
-                >
-                    Contact
                 </Link>
             </Stack>
         </div>
