@@ -28,22 +28,36 @@ const Main: React.FC = () => {
         <div className="App-page" >
             <div className='view-hight' ref={defaultRef}>
                 <div className={matches ? 'main-mobile-div' : 'main-div'}>
-                    <div>
-                        <h1 style={{ color: "#333", fontWeight: 500 }}>
-                            <TypeWriter text={"Hi."} delay={40} />
-                        </h1>
-                        <h1 style={{ color: "#333", fontWeight: 500 }}>
-                            <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
-                            <br />
-                            <a className="a" style={{ fontSize: 16, fontWeight: 500, color: "grey" }} onClick={() => setShowMore(!showMore)}>
-                                {!showMore ? "more" : "less"}
-                            </a>
-                        </h1>
-                    </div>
+                    {matches ?
+                        <div>
+                            <h3 style={{ color: "#333", fontWeight: 500 }}>
+                                <TypeWriter text={"Hi."} delay={40} />
+                            </h3>
+                            <h3 style={{ color: "#333", fontWeight: 500 }}>
+                                <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
+                                <br />
+                                <a className="a" style={{ fontSize: 16, fontWeight: 500, color: "grey" }} onClick={() => setShowMore(!showMore)}>
+                                    {!showMore ? "more" : "less"}
+                                </a>
+                            </h3>
+                        </div>
+                        : <div>
+                            <h1 style={{ color: "#333", fontWeight: 500 }}>
+                                <TypeWriter text={"Hi."} delay={40} />
+                            </h1>
+                            <h1 style={{ color: "#333", fontWeight: 500 }}>
+                                <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
+                                <br />
+                                <a className="a" style={{ fontSize: 16, fontWeight: 500, color: "grey" }} onClick={() => setShowMore(!showMore)}>
+                                    {!showMore ? "more" : "less"}
+                                </a>
+                            </h1>
+                        </div>
+                    }
                     <div>
                         {showMore &&
                             <div>
-                                <p>
+                                <p style={{ fontSize: matches ? 14 : 16, color: "#555" }}>
                                     Before transitioning into the tech industry, I studied nursing and worked as a nurse in South Korea and UK for 6 years. <br />
                                     As a frontend developer, I worked with a health tech start-up, <a className="a" style={{ fontWeight: 500 }} href="https://www.rampmedical.com/" target="_blank" rel="noreferrer">Ramp medical</a> based in Berlin, for 3 years. <br />
                                     Personally, I aim to write clean code and I am keen on working with data visualasiation.
