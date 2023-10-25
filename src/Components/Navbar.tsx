@@ -33,15 +33,6 @@ const Navbar: React.FC = () => {
                 >
                     <YardIcon style={{ height: 50, width: 50 }} />
                 </Link>
-                <Link
-                    underline="hover"
-                    className="nav-link"
-                    color={selectedRoute === "works" ? "#000000" : "#828282"}
-                    variant="h6"
-                    onClick={(event) => handleSelectRoute(event, "works")}
-                >
-                    Works
-                </Link>
             </Stack>
         </div>
 
