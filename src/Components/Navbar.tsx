@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Link, Stack } from "@mui/material"
+import { Link, Stack, useMediaQuery, useTheme } from "@mui/material"
 import YardIcon from '@mui/icons-material/Yard';
 import '../App.css'
 
 const Navbar: React.FC = () => {
     const [selectedRoute, setSelectedRoute] = useState<string>("main")
     const navigate = useNavigate();
+    const theme = useTheme();
+    const xsMatch = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleSelectRoute = (event: React.SyntheticEvent, link?: string) => {
         event.preventDefault();
@@ -20,7 +22,7 @@ const Navbar: React.FC = () => {
         } else if (link === "works") {
             setSelectedRoute("works")
             navigate("/works")
-        } 
+        }
     }
 
     return (
@@ -31,7 +33,7 @@ const Navbar: React.FC = () => {
                     color="#000000"
                     onClick={(event) => handleSelectRoute(event, "main")}
                 >
-                    <YardIcon style={{ height: 50, width: 50 }} />
+                    <YardIcon style={{ height: 50, width: 50, marginLeft: xsMatch? -4: "inherit" }} />
                 </Link>
             </Stack>
         </div>

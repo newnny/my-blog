@@ -48,7 +48,7 @@ const Main: React.FC = () => {
                             <h1 style={{ color: "#333", fontWeight: 500 }}>
                                 <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
                                 <br />
-                                <a className="a" style={{ fontSize: 16, fontWeight: 500, color: "grey" }} onClick={() => setShowMore(!showMore)}>
+                                <a className="a" style={{ fontSize: 16, color: "grey" }} onClick={() => setShowMore(!showMore)}>
                                     {!showMore ? "more" : "less"}
                                 </a>
                             </h1>
@@ -58,7 +58,8 @@ const Main: React.FC = () => {
                         {showMore &&
                             <div>
                                 <p style={{ fontSize: matches ? 14 : 16, color: "#555" }}>
-                                    Before transitioning into the tech industry, I studied nursing and worked as a nurse in South Korea and UK for 6 years. <br />
+                                    Before transitioning into the tech industry, I studied nursing and worked as a nurse in South Korea and UK for 6 years. 
+                                    <br /><br />
                                     As a frontend developer, I worked with a health tech start-up, <a className="a" style={{ fontWeight: 500 }} href="https://www.rampmedical.com/" target="_blank" rel="noreferrer">Ramp medical</a> based in Berlin, for 3 years. <br />
                                     Personally, I aim to write clean code and I am keen on working with data visualasiation.
                                     <br /><br />
@@ -72,9 +73,9 @@ const Main: React.FC = () => {
 
                 </div>
             </div>
-            <div className='view-hight' id="introduction" ref={projectRef}>
+            <div className='view-hight' id="introduction" ref={projectRef} style={{ marginLeft: matches ? -20 : "inherit" }}>
                 <Works />
-                <StraightIcon onClick={scrollToDefault} style={{ color: "grey", cursor: "pointer", marginTop: 15 }} />
+                <StraightIcon onClick={scrollToDefault} style={{ color: "grey", cursor: "pointer", marginTop: 15, marginBottom: 20 }} />
             </div>
         </div>
     )
