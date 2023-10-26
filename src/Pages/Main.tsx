@@ -66,7 +66,6 @@ const Main: React.FC = () => {
                                     And I enjoy writing, baking, Kendo and maintaining my <a className="a" style={{ fontWeight: 500 }} href="https://blog.naver.com/type_rh" target="_blank" rel="noreferrer">blog</a>
                                 </p>
                                 <StraightIcon onClick={scrollToProject} style={{ color: "grey", cursor: "pointer", transform: "rotate(180deg)", marginLeft: -8 }} />
-
                             </div>
                         }
                     </div>
