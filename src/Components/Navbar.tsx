@@ -33,11 +33,10 @@ const Navbar: React.FC = () => {
                     color="#000000"
                     onClick={(event) => handleSelectRoute(event, "main")}
                 >
-                    <YardIcon style={{ height: 50, width: 50, marginLeft: xsMatch? -4: "inherit" }} />
+                    <YardIcon style={{ height: 50, width: 50, marginLeft: xsMatch ? -4 : "inherit" }} />
                 </Link>
             </Stack>
         </div>
-
     )
 }
 

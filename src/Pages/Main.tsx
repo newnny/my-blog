@@ -35,10 +35,10 @@ const Main: React.FC = () => {
                             </h3>
                             <h3 style={{ color: "#333", fontWeight: 500 }}>
                                 <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
-                                <br />
-                                <a className="a" style={{ fontSize: 16, fontWeight: 500, color: "grey" }} onClick={() => setShowMore(!showMore)}>
+                                <br /><br />
+                                <button className="about-btn" onClick={() => setShowMore(!showMore)}>
                                     {!showMore ? "more" : "less"}
-                                </a>
+                                </button>
                             </h3>
                         </div>
                         : <div>
@@ -47,10 +47,10 @@ const Main: React.FC = () => {
                             </h1>
                             <h1 style={{ color: "#333", fontWeight: 500 }}>
                                 <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
-                                <br />
-                                <a className="a" style={{ fontSize: 16, color: "grey" }} onClick={() => setShowMore(!showMore)}>
+                                <br /><br />
+                                <button className="about-btn" onClick={() => setShowMore(!showMore)}>
                                     {!showMore ? "more" : "less"}
-                                </a>
+                                </button>
                             </h1>
                         </div>
                     }
