@@ -62,25 +62,35 @@ const Works: React.FC = () => {
     return (
         <div className="flex-column">
             {list.map(i => (
-                <div className="flex-row" style={{ marginTop: 10, marginBottom: 10 }}>
+                <div key={i.id} className="flex-row" style={{ marginTop: 10, marginBottom: 10 }}>
                     <div style={{ width: 30, backgroundColor: "white", display: "flex", justifyContent: "center", alignItems: "center", minHeight: 90 }}>
                         <p style={{ transform: "rotate(-90deg)" }}>
                             {i.category}
                         </p>
                     </div>
                     <div style={{ display: "flex", width: "100%" }}>
-                        <Grid container direction={xsMatch ? "column" : "row"} style={{ minHeight: 90 }}>
-                            <Grid item sm={2} xs={12} style={{ display: "flex", alignItems: "center" }}>
+                        <Grid container direction={"column"} style={{ minHeight: 90, justifyContent: "center" }}>
+                            <Grid item style={{ display: "flex", alignItems: "center" }}>
                                 <Typography
                                     key={i.id}
                                     style={{ color: i.textColor, cursor: "pointer", fontSize: 16, padding: 10 }}
                                     onClick={() => handleClickCategory(i.id, i.name)}
                                 >
-                                    {i.name}
+                                    {i.name === "Working with D3.js" ?
+                                        <a
+                                            href="https://visualisations-one.vercel.app/"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            style={{ padding: 10, color: "inherit", fontSize: xsMatch ? 14 : "inherit", textDecoration: "none" }}
+                                        >
+                                            {i.name}
+                                        </a>
+                                        : i.name
+                                    }
                                 </Typography>
                             </Grid>
                             {selectedItem !== "" && i.select &&
-                                <Grid item sm={10} xs={12}>
+                                <Grid item>
                                     {selectedItem === "RAMP medical" && i.select &&
                                         <div className="flex-column" style={{ padding: 10 }}>
                                             <div className="flex-center">
@@ -121,12 +131,8 @@ const Works: React.FC = () => {
                                             </div>
                                         </div>
                                     }
-                                    {selectedItem === "Working with D3.js" && i.select &&
-                                        <a className="a" href="https://visualisations-one.vercel.app/" target="_blank" rel="noreferrer" style={{ padding: 10, fontSize: xsMatch ? 14 : "inherit" }}>
-                                            view D3 project
-                                        </a>
-                                    }
-                                </Grid>}
+                                </Grid>
+                            }
                         </Grid>
                     </div>
                 </div>
