@@ -3,6 +3,7 @@ import './Page.css'
 import { useMediaQuery, useTheme, Grid, Typography } from "@mui/material"
 import minifluxbinder from '../Images/minifluxbinder.png'
 import ramp from '../Images/ramp.png'
+import hackyourfridge from '../Images/hackyourfirdge.png'
 
 interface Data {
     id: number;
@@ -34,10 +35,17 @@ const Works: React.FC = () => {
         {
             id: 3,
             category: "project",
+            name: "Hack your fridge",
+            textColor: "#828282",
+            select: false
+        },
+        {
+            id: 4,
+            category: "project",
             name: "Working with D3.js",
             textColor: "#828282",
             select: false
-        }
+        },
     ])
     const [selectedItem, setSelectedItem] = useState<string>("")
 
@@ -56,6 +64,9 @@ const Works: React.FC = () => {
             setSelectedItem("Miniflux e-pub binder")
         } else if (name === "Working with D3.js") {
             setSelectedItem("Working with D3.js")
+        } else if (name === "Hack your fridge") {
+            setSelectedItem("Hack your fridge")
+
         }
     }
 
@@ -126,6 +137,23 @@ const Works: React.FC = () => {
                                                     Please check here:&nbsp;
                                                     <a className="a" href="https://www.minifluxbinder.com/" target="_blank" rel="noreferrer">
                                                         www.minifluxbinder.com
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    }
+                                    {selectedItem === "Hack your fridge" && i.select &&
+                                        <div className="flex-column" style={{ padding: 10 }}>
+                                            <div className="flex-center">
+                                                <img style={{ width: xsMatch ? "100%" : "30%" }} src={hackyourfridge} alt="hackyourfridge" />
+                                            </div>
+                                            <div className="flex-center">
+                                                <p style={{ fontSize: smMatch ? 14 : "inherit", color: "#444" }}>
+                                                    Hack your Fridge is a web application that helps users cook efficiently by suggesting recipes based on the ingredients they have in their fridge.<br />
+                                                    The application leverages the Yummly API and is built using TypeScript, React, and deployed on Vercel.<br />
+                                                    Please check here:&nbsp;
+                                                    <a className="a" href="https://hack-your-fridge.vercel.app/" target="_blank" rel="noreferrer">
+                                                        HAYFRIE: HAck Your FRIdgE
                                                     </a>
                                                 </p>
                                             </div>
