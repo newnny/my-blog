@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import './Page.css'
 import { useMediaQuery, useTheme, Grid, Typography } from "@mui/material"
-import minifluxbinder from '../Images/minifluxbinder.png'
-import ramp from '../Images/ramp.png'
-import hackyourfridge from '../Images/hackyourfirdge.png'
+
 
 interface Data {
     id: number;
@@ -105,7 +103,6 @@ const Works: React.FC = () => {
                                     {selectedItem === "RAMP medical" && i.select &&
                                         <div className="flex-column" style={{ padding: 10 }}>
                                             <div className="flex-center">
-                                                <img style={{ width: xsMatch ? "100%" : "30%" }} src={ramp} alt="ramp" />
                                             </div>
                                             <div className="flex-center">
                                                 <p style={{ fontSize: smMatch ? 14 : "inherit", color: "#444" }}>
@@ -127,7 +124,6 @@ const Works: React.FC = () => {
                                     {selectedItem === "Miniflux e-pub binder" && i.select &&
                                         <div className="flex-column" style={{ padding: 10 }}>
                                             <div className="flex-center">
-                                                <img style={{ width: xsMatch ? "100%" : "30%" }} src={minifluxbinder} alt="minifluxbinder" />
                                             </div>
                                             <div className="flex-center">
                                                 <p style={{ fontSize: smMatch ? 14 : "inherit", color: "#444" }}>
@@ -145,7 +141,6 @@ const Works: React.FC = () => {
                                     {selectedItem === "Hack your fridge" && i.select &&
                                         <div className="flex-column" style={{ padding: 10 }}>
                                             <div className="flex-center">
-                                                <img style={{ width: xsMatch ? "100%" : "30%" }} src={hackyourfridge} alt="hackyourfridge" />
                                             </div>
                                             <div className="flex-center">
                                                 <p style={{ fontSize: smMatch ? 14 : "inherit", color: "#444" }}>

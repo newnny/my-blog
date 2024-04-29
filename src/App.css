@@ -1,6 +1,32 @@
 .App {
   font-family: 'Space Mono', monospace;
-  margin: 20px;
+  width: 100%;
+  height: auto;
+}
+
+#light {
+  background: #E0DCD9;
+  color: #424242;
+}
+
+#dark {
+background: #424242;
+color: #E0DCD9;
+}
+
+.btn-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 15px;
+}
+
+.icon {
+  width: 30px;
 }
 
 .nav-link {
@@ -11,13 +37,3 @@ a:hover {
   cursor: pointer;
 }
 
-.footer-div {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  margin: 10px;
-  color: grey;
-}

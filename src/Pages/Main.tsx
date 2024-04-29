@@ -1,15 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import { useMediaQuery, useTheme } from "@mui/material"
-import TypeWriter from '../Components/TypeWriter'
-import Works from './Works'
-import StraightIcon from '@mui/icons-material/Straight';
-import './Page.css'
+import './MainStyles.css'
+import { ThemeContext } from '../App'
 
 
 const Main: React.FC = () => {
     const [showMore, setShowMore] = useState(false)
     const defaultRef = useRef<HTMLDivElement>(null);
     const projectRef = useRef<HTMLDivElement>(null);
+    const theme = useContext(ThemeContext)
 
     const scrollToDefault = () => {
         defaultRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -22,61 +21,38 @@ const Main: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <div className="App-page" >
-            <div className='view-hight' ref={defaultRef}>
-                <div className={matches ? 'main-mobile-div' : 'main-div'}>
-                    {matches ?
-                        <div>
-                            <h3 style={{ color: "#333", fontWeight: 500 }}>
-                                <TypeWriter text={"Hi."} delay={40} />
-                            </h3>
-                            <h3 style={{ color: "#333", fontWeight: 500 }}>
-                                <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
-                                <br /><br />
-                                <button className="about-btn" onClick={() => setShowMore(!showMore)}>
-                                    {!showMore ? "more" : "less"}
-                                </button>
-                            </h3>
-                        </div>
-                        : <div>
-                            <h1 style={{ color: "#333", fontWeight: 500 }}>
-                                <TypeWriter text={"Hi."} delay={40} />
-                            </h1>
-                            <h1 style={{ color: "#333", fontWeight: 500 }}>
-                                <TypeWriter text={"My name is Younhee(YUNI) Park and I am a JavaScript frontend developer."} delay={40} />
-                                <br /><br />
-                                <button className="about-btn" onClick={() => setShowMore(!showMore)}>
-                                    {!showMore ? "more" : "less"}
-                                </button>
-                            </h1>
-                        </div>
-                    }
-                    <div>
-                        {showMore &&
-                            <div>
-                                <p style={{ fontSize: matches ? 14 : 16, color: "#555" }}>
-                                    Before transitioning into the tech industry, I studied nursing and worked as a nurse in South Korea and UK for 6 years. 
-                                    <br /><br />
-                                    As a frontend developer, I worked with a health tech start-up, <a className="a" style={{ fontWeight: 500 }} href="https://www.rampmedical.com/" target="_blank" rel="noreferrer">Ramp medical</a> based in Berlin, for 3 years. <br />
-                                    Personally, I aim to write clean code and I am keen on working with data visualasiation.
-                                    <br /><br />
-                                    And I enjoy writing, baking, Kendo and maintaining my <a className="a" style={{ fontWeight: 500 }} href="https://blog.naver.com/type_rh" target="_blank" rel="noreferrer">blog</a>
-                                </p>
-                                <StraightIcon onClick={scrollToProject} style={{ color: "grey", cursor: "pointer", transform: "rotate(180deg)", marginLeft: -8 }} />
-                            </div>
-                        }
-                    </div>
-
-                </div>
-            </div>
-            <div className='view-hight' id="introduction" ref={projectRef} style={{ marginLeft: matches ? -20 : "inherit" }}>
-                <Works />
-                <StraightIcon onClick={scrollToDefault} style={{ color: "grey", cursor: "pointer", marginTop: 15, marginBottom: 20 }} />
-            </div>
-        </div>
+        <main className='main' id={theme!}>
+            <section className='main-left-section'>
+                <section className='left-section-inner-section' />
+                <section className='left-section-inner-section'>
+                    <hr className='vertical-line' />
+                    <article className='name-field'>
+                        <p className='name'>Y</p>
+                        <p className='name'>U</p>
+                        <p className='name'>N</p>
+                        <p className='name'>I</p>
+                        <p />
+                        <p className='name'>P</p>
+                        <p className='name'>A</p>
+                        <p className='name'>R</p>
+                        <p className='name'>K</p>
+                    </article>
+                    <hr className='vertical-line' />
+                </section>
+            </section>
+            <section className='main-right-section'>
+                <p className='main-h1'>Welcome.</p>
+                <p className='main-p1'>
+                    My name is Yuni.
+                    <br />
+                    I am a frontend engineer and
+                    <br />
+                    UI designer
+                </p>
+                <p>See more</p>
+            </section>
+        </main>
     )
 }
 
