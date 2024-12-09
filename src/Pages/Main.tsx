@@ -1,56 +1,47 @@
-import React, { useState, useRef, useEffect, useContext } from 'react'
-import { useMediaQuery, useTheme } from "@mui/material"
+import React, { useEffect, useContext } from 'react'
 import './MainStyles.css'
 import { ThemeContext } from '../App'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Main: React.FC = () => {
-    const [showMore, setShowMore] = useState(false)
-    const defaultRef = useRef<HTMLDivElement>(null);
-    const projectRef = useRef<HTMLDivElement>(null);
     const theme = useContext(ThemeContext)
-
-    const scrollToDefault = () => {
-        defaultRef.current?.scrollIntoView({ behavior: 'smooth' })
-    }
-    const scrollToProject = () => {
-        projectRef.current?.scrollIntoView({ behavior: 'smooth' })
-    }
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
-        <main className='main' id={theme!}>
-            <section className='main-left-section'>
-                <section className='left-section-inner-section' />
-                <section className='left-section-inner-section'>
+        <main className="flex flex-col items-center h-dvh sm:flex-row" id={theme!}>
+            <section className='flex w-[40%] h-[50%] sm:m-30 justify-end'>
+                <section className='flex w-[50%]'>
                     <hr className='vertical-line' />
-                    <article className='name-field'>
-                        <p className='name'>Y</p>
-                        <p className='name'>U</p>
-                        <p className='name'>N</p>
-                        <p className='name'>I</p>
-                        <p />
-                        <p className='name'>P</p>
-                        <p className='name'>A</p>
-                        <p className='name'>R</p>
-                        <p className='name'>K</p>
+                    <article className='flex flex-col justify-center text-xl'>
+                        <p>Y</p>
+                        <p>U</p>
+                        <p>N</p>
+                        <p>I</p>
+                        <p className='mt-2 mb-2'/>
+                        <p>P</p>
+                        <p>A</p>
+                        <p>R</p>
+                        <p>K</p>
                     </article>
-                    <hr className='vertical-line' />
+                    <hr className='vertical-line mt-[200%] sm:mt-[55%] ' />
                 </section>
             </section>
-            <section className='main-right-section'>
-                <p className='main-h1'>Welcome.</p>
-                <p className='main-p1'>
+            <section className='flex flex-col w-[60%] h-[50%] m-10'>
+                <p className='text-[50px]'>Welcome.</p>
+                <p className='text-[24px]'>
                     My name is Yuni.
                     <br />
                     I am a frontend engineer and
                     <br />
-                    UI designer
+                    UI designer.
                 </p>
-                <p>See more</p>
+                <a className='mt-3' onClick={() => navigate('/view')}>Learn more</a>
             </section>
         </main>
     )

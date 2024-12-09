@@ -1,12 +1,11 @@
 import React, { useState, createContext } from 'react'
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import { createTheme, ThemeProvider } from '@mui/material';
 import Moon from './assets/moon.svg'
 import Sun from './assets/sun.svg'
 
 import Main from './Pages/Main';
-import Works from './Pages/Works';
+import View from './Pages/View';
 import Footer from './Components/Footer';
 
 export const ThemeContext = createContext<string | null>(null);
@@ -19,18 +18,18 @@ function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-        <main className="App" id={theme}>
+        <main className="w-full h-dvh" id={theme}>
           <section className='btn-section'>
             <button onClick={toggleTheme} className="btn" id={theme}>
               {theme === 'light' ?
                 <img src={Moon} alt='dark' className="icon" /> :
-                <img src={Sun} alt='light' className="icon" />
+                <img src={Sun} alt='light' className="icon bg-[#e0dcd9] rounded" />
               }
             </button>
           </section>
           <Routes>
             <Route path='/' element={<Main />} />
-            <Route path='/works' element={<Works />} />
+            <Route path='/view' element={<View />} />
           </Routes>
         </main>
         <Footer />
