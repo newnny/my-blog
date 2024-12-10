@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import About from './About'
 import Projects from './Projects'
 
@@ -13,11 +13,16 @@ const View = () => {
     }
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
+
   const defaultText = "text-[50px] text-[#717171] cursor-pointer"
   const selectedText = "text-[50px] cursor-pointer underline"
 
   return (
-    <section className="flex flex-col m-10 gap-y-3 sm:flex-row sm:m-10 sm:gap-x-40">
+    <section className="flex flex-col m-10 gap-y-3 h-[80dvh] sm:flex-row sm:m-10 sm:gap-x-40">
       <section className='flex flex-col sm:w-[40%] sm:gap-y-10'>
         <article className='flex sm:justify-end'>
           <p
@@ -48,7 +53,7 @@ const View = () => {
           </p>
         </article>
       </section>
-      <section className='h-dvh sm:w-[60%]'>
+      <section className='sm:w-[60%]'>
         {selected === 'about' && <About />}
         {selected === 'projects' && <Projects />}
       </section>

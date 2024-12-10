@@ -14,7 +14,7 @@ const Main: React.FC = () => {
     }, []);
 
     return (
-        <main className="flex flex-col items-center h-dvh sm:flex-row" id={theme!}>
+        <main className="flex flex-col items-center h-[85dvh] sm:flex-row" id={theme!}>
             <section className='flex w-[40%] h-[50%] sm:m-30 justify-end'>
                 <section className='flex w-[50%]'>
                     <hr className='vertical-line' />
@@ -23,7 +23,7 @@ const Main: React.FC = () => {
                         <p>U</p>
                         <p>N</p>
                         <p>I</p>
-                        <p className='mt-2 mb-2'/>
+                        <p className='mt-2 mb-2' />
                         <p>P</p>
                         <p>A</p>
                         <p>R</p>

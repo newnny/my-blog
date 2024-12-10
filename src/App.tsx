@@ -18,7 +18,8 @@ function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-        <main className="w-full h-dvh" id={theme}>
+      <div className='min-h-screen' id={theme}>
+        <main className='h-full'>
           <section className='btn-section'>
             <button onClick={toggleTheme} className="btn" id={theme}>
               {theme === 'light' ?
@@ -33,6 +34,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+      </div>
     </ThemeContext.Provider>
   );
 }
