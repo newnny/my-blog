@@ -18,7 +18,7 @@ const Main: React.FC = () => {
             <section className='flex w-[40%] h-[50%] sm:m-30 justify-end'>
                 <section className='flex w-[50%]'>
                     <hr className='vertical-line' />
-                    <article className='flex flex-col justify-center text-xl'>
+                    <article className='flex flex-col justify-center items-center text-xl'>
                         <p>Y</p>
                         <p>U</p>
                         <p>N</p>
