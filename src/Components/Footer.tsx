@@ -20,7 +20,7 @@ const Footer = () => {
   useEffect(() => {
     location.pathname === "/" ? setSelectedPage('main') : setSelectedPage('/view')
   }, [location.pathname])
-  
+
   return (
     <footer className='flex flex-col sm:flex-row m-10 text-gray-400 w-full sticky bottom-0'>
       <section className='footer-left-section'>
