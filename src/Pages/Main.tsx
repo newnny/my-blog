@@ -14,7 +14,7 @@ const Main: React.FC = () => {
     }, []);
 
     return (
-        <main className="flex flex-col items-center h-[85dvh] sm:flex-row" id={theme!}>
+        <main className="flex flex-col items-center h-[80dvh] sm:flex-row sm:h-[85dvh]" id={theme!}>
             <section className='flex w-[40%] h-[50%] sm:m-30 justify-end'>
                 <section className='flex w-[50%]'>
                     <hr className='vertical-line' />
@@ -41,7 +41,7 @@ const Main: React.FC = () => {
                     <br />
                     UI designer.
                 </p>
-                <a className='mt-3' onClick={() => navigate('/view')}>Learn more</a>
+                <a className='underline mt-3 cursor-pointer' onClick={() => navigate('/view')}>Learn more</a>
             </section>
         </main>
     )

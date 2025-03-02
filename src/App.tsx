@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, useEffect } from 'react'
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import Moon from './assets/moon.svg'
@@ -15,6 +15,10 @@ function App() {
   const toggleTheme = () => {
     setTheme((current) => current === 'light' ? 'dark' : 'light')
   }
+
+  useEffect(() => {
+    document.body.style.backgroundColor = theme === 'light' ? '#e0dcd9' : '#424242'; 
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -33,7 +37,9 @@ function App() {
             <Route path='/view' element={<View />} />
           </Routes>
         </main>
+        <div className='mb-10 sm:mb-0'>
         <Footer />
+        </div>
       </div>
     </ThemeContext.Provider>
   );

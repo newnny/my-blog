@@ -1,17 +1,17 @@
 .App {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   width: 100%;
   height: auto;
 }
 
 #light {
-  background: #E0DCD9;
+  background: #e0dcd9;
   color: #424242;
 }
 
 #dark {
-background: #424242;
-color: #E0DCD9;
+  background: #424242;
+  color: #e0dcd9;
 }
 
 .btn-section {
@@ -36,4 +36,3 @@ color: #E0DCD9;
 a:hover {
   cursor: pointer;
 }
-

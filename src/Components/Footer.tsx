@@ -24,7 +24,7 @@ const Footer = () => {
   const selectedText = "cursor-pointer text-[#e85847] font-semibold"
 
   return (
-    <footer className='flex flex-col mt-10 text-gray-400 w-full sm:flex-row '>
+    <footer className='flex flex-col mt-10 gap-y-2 text-gray-400 w-full sm:flex-row'>
       <section className='flex justify-center sm:w-[40%]'>
         <dl className='flex flex-row space-x-2'>
           <p

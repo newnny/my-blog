@@ -22,7 +22,7 @@ const View = () => {
   const selectedText = "text-[50px] cursor-pointer underline"
 
   return (
-    <section className="flex flex-col m-10 gap-y-3 h-[80dvh] sm:flex-row sm:m-10 sm:gap-x-40">
+    <section className="flex flex-col m-5 gap-y-3 h-[75dvh] sm:flex-row sm:m-10 sm:gap-x-40 sm:h-[80dvh]">
       <section className='flex flex-col sm:w-[40%] sm:gap-y-10'>
         <article className='flex sm:justify-end'>
           <p
